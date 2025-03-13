@@ -81,28 +81,47 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("tsParticles not found");
     }
     
-    // SCROLL FUNCTIONALITY
-    document.querySelector('.learn-more')?.addEventListener('click', function(e) {
-        e.preventDefault();
-        const featuresSection = document.getElementById('features-section');
-        if (featuresSection) {
-            window.scrollTo({
-                top: featuresSection.offsetTop,
-                behavior: 'smooth'
-            });
+    // Cross-browser compatible scroll functionality
+    function smoothScroll(target) {
+        console.log("Smoothscroll triggered for", target);
+        if (target) {
+            // Try multiple scroll methods for cross-browser compatibility
+            try {
+                // Method 1: scrollIntoView
+                target.scrollIntoView({behavior: 'smooth'});
+            } catch (e) {
+                try {
+                    // Method 2: Using window.scrollTo with offset
+                    const yOffset = target.getBoundingClientRect().top + window.pageYOffset;
+                    window.scrollTo({top: yOffset, behavior: 'smooth'});
+                } catch (e2) {
+                    // Method 3: Fallback for older browsers without smooth scroll
+                    const yOffset = target.getBoundingClientRect().top + window.pageYOffset;
+                    window.scrollTo(0, yOffset);
+                }
+            }
         }
-    });
+    }
+
+    // Learn more button scroll
+    const learnMoreButton = document.querySelector('.learn-more');
+    if (learnMoreButton) {
+        learnMoreButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            const featuresSection = document.getElementById('features-section');
+            smoothScroll(featuresSection);
+        });
+    }
     
-    document.querySelector('.arrow-down')?.addEventListener('click', function(e) {
-        e.preventDefault();
-        const featuresSection = document.getElementById('features-section');
-        if (featuresSection) {
-            window.scrollTo({
-                top: featuresSection.offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    });
+    // Arrow down scroll
+    const arrowDown = document.querySelector('.arrow-down');
+    if (arrowDown) {
+        arrowDown.addEventListener('click', function(e) {
+            e.preventDefault();
+            const featuresSection = document.getElementById('features-section');
+            smoothScroll(featuresSection);
+        });
+    }
     
     // Handle form submission
     const contactForm = document.getElementById('contact-form');
