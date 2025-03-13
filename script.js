@@ -81,5 +81,45 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("tsParticles not found");
     }
     
-    // Rest of your code remains the same
+    // SCROLL FUNCTIONALITY
+    document.querySelector('.learn-more')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        const featuresSection = document.getElementById('features-section');
+        if (featuresSection) {
+            window.scrollTo({
+                top: featuresSection.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+    
+    document.querySelector('.arrow-down')?.addEventListener('click', function(e) {
+        e.preventDefault();
+        const featuresSection = document.getElementById('features-section');
+        if (featuresSection) {
+            window.scrollTo({
+                top: featuresSection.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+    
+    // Handle form submission
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            // Simple form validation
+            const email = this.querySelector('[name="email"]').value;
+            const name = this.querySelector('[name="name"]').value;
+            const message = this.querySelector('[name="message"]').value;
+            
+            if (!email || !name || !message) {
+                e.preventDefault(); // Prevent form submission if validation fails
+                alert('Please fill out all required fields');
+                return false;
+            }
+            
+            // Form will naturally submit to the action URL
+        });
+    }
 });
