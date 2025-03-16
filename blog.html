@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <title>AI Infrastructure Blog | Agenxic</title>
+    <meta name="description" content="Explore insights, case studies, and best practices for implementing enterprise-grade AI infrastructure and autonomous operations.">
+    <meta property="og:title" content="AI Infrastructure Blog | Agenxic">
+    <meta property="og:description" content="Insights and best practices for implementing enterprise-grade AI infrastructure and autonomous operations.">
+    <meta property="og:url" content="https://agenxic.com/blog.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://agenxic.com/images/blog-og-image.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional blog-specific styles */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .blog-card {
+            background: rgba(40, 44, 52, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .blog-image {
+            height: 180px;
+            background-color: #1d5a8a;
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+        }
+        
+        .blog-date {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .blog-excerpt {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .blog-link {
+            color: #1d5a8a;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        
+        .blog-link:hover {
+            border-color: #1d5a8a;
+        }
+        
+        .blog-filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .blog-filter {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .blog-filter:hover, .blog-filter.active {
+            background: rgba(29, 90, 138, 0.2);
+            border-color: #1d5a8a;
+        }
+        
+        .blog-header {
+            text-align: center;
+            padding: 4rem 0 2rem;
+        }
+        
+        .blog-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-description {
+            max-width: 700px;
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html" style="text-decoration: none; color: #ffffff;">
+                <h1>AGEN<span class="highlight">XIC</span></h1>
+            </a>
+        </div>
+        <div class="nav-container">
+            <a href="contact.html" class="cta-button">Get in touch</a>
+        </div>
+    </header>
+    
+    <main>
+        <section class="blog-header">
+            <h1>AI Infrastructure Insights</h1>
+            <p class="blog-description">
+                Explore our latest thinking on enterprise AI adoption, autonomous workflows, and building future-ready infrastructure that delivers measurable business impact.
+            </p>
+        </section>
+        
+        <section>
+            <div class="blog-filters">
+                <button class="blog-filter active">All</button>
+                <button class="blog-filter">Case Studies</button>
+                <button class="blog-filter">Technology</button>
+                <button class="blog-filter">Best Practices</button>
+                <button class="blog-filter">Industry Insights</button>
+            </div>
+            
+            <div class="blog-grid">
+                <!-- Blog post 1 -->
+                <div class="blog-card">
+                    <div class="blog-image" style="background-color: #1a3a5a;"></div>
+                    <div class="blog-content">
+                        <div class="blog-date">March 15, 2025</div>
+                        <h2 class="blog-title">Implementing Autonomous Workflows in Financial Services</h2>
+                        <p class="blog-excerpt">
+                            How a leading investment firm automated their back-office operations and reduced processing time by 78% while improving accuracy to 99.7%.
+                        </p>
+                        <a href="/blog/autonomous-workflows-finance.html" class="blog-link">Read more →</a>
+                    </div>
+                </div>
+                
+                <!-- Blog post 2 -->
+                <div class="blog-card">
+                    <div class="blog-image" style="background-color: #2a4a6a;"></div>
+                    <div class="blog-content">
+                        <div class="blog-date">March 8, 2025</div>
+                        <h2 class="blog-title">The ROI of Enterprise AI: Beyond Cost Reduction</h2>
+                        <p class="blog-excerpt">
+                            While efficiency gains are valuable, the true business impact of AI comes from enabling new capabilities and business models.
+                        </p>
+                        <a href="/blog/roi-enterprise-ai.html" class="blog-link">Read more →</a>
+                    </div>
+                </div>
+                
+                <!-- Blog post 3 -->
+                <div class="blog-card">
+                    <div class="blog-image" style="background-color: #3a5a7a;"></div>
+                    <div class="blog-content">
+                        <div class="blog-date">February 28, 2025</div>
+                        <h2 class="blog-title">Designing AI Infrastructure for Scale: Key Architecture Decisions</h2>
+                        <p class="blog-excerpt">
+                            From data pipelines to model deployment, the critical architectural choices that determine whether your AI initiative scales or fails.
+                        </p>
+                        <a href="/blog/ai-infrastructure-scale.html" class="blog-link">Read more →</a>
+                    </div>
+                </div>
+                
+                <!-- Blog post 4 -->
+                <div class="blog-card">
+                    <div class="blog-image" style="background-color: #4a6a8a;"></div>
+                    <div class="blog-content">
+                        <div class="blog-date">February 20, 2025</div>
+                        <h2 class="blog-title">Responsible AI: Building Ethical Guardrails Into Autonomous Systems</h2>
+                        <p class="blog-excerpt">
+                            As autonomous systems make more decisions, implementing appropriate governance and oversight becomes critical.
+                        </p>
+                        <a href="/blog/responsible-ai-guardrails.html" class="blog-link">Read more →</a>
+                    </div>
+                </div>
+                
+                <!-- Blog post 5 -->
+                <div class="blog-card">
+                    <div class="blog-image" style="background-color: #5a7a9a;"></div>
+                    <div class="blog-content">
+                        <div class="blog-date">February 12, 2025</div>
+                        <h2 class="blog-title">Healthcare Transformation Through Intelligent Workflows</h2>
+                        <p class="blog-excerpt">
+                            How three leading healthcare providers are using AI to improve patient outcomes, reduce administrative burden, and optimize resource allocation.
+                        </p>
+                        <a href="/blog/healthcare-intelligent-workflows.html" class="blog-link">Read more →</a>
+                    </div>
+                </div>
+                
+                <!-- Blog post 6 -->
+                <div class="blog-card">
+                    <div class="blog-image" style="background-color: #6a8aaa;"></div>
+                    <div class="blog-content">
+                        <div class="blog-date">February 5, 2025</div>
+                        <h2 class="blog-title">From Data Chaos to Intelligence: Building Effective Data Pipelines</h2>
+                        <p class="blog-excerpt">
+                            The foundation of effective AI is clean, relevant, and accessible data. Here's how to build data pipelines that deliver.
+                        </p>
+                        <a href="/blog/data-pipelines-intelligence.html" class="blog-link">Read more →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Newsletter signup -->
+        <section style="background: rgba(29, 90, 138, 0.1); padding: 3rem; border-radius: 6px; margin: 4rem 0; text-align: center;">
+            <h2 style="margin-bottom: 1rem;">Stay Updated on AI Infrastructure Trends</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem; color: rgba(255, 255, 255, 0.8);">
+                Subscribe to our newsletter for monthly insights on autonomous operations, AI implementation, and business transformation.
+            </p>
+            <form style="max-width: 500px; margin: 0 auto;">
+                <div style="display: flex; gap: 1rem;">
+                    <input type="email" placeholder="Your email address" required style="flex: 1; padding: 0.8rem; border-radius: 4px; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.05); color: white;">
+                    <button type="submit" style="background: #1d5a8a; color: white; border: none; padding: 0 1.5rem; border-radius: 4px; cursor: pointer;">Subscribe</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p>Agenxic | © 2025</p>
+            <div class="footer-links">
+                <a href="blog.html">Blog</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        // Simple filter functionality
+        const filters = document.querySelectorAll('.blog-filter');
+        filters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                // Remove active class from all filters
+                filters.forEach(f => f.classList.remove('active'));
+                // Add active class to clicked filter
+                filter.classList.add('active');
+                
+                // In a real implementation, you would filter the blog posts here
+                // For now, this is just a UI demonstration
+            });
+        });
+    </script>
+</body>
+</html>
