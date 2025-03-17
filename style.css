@@ -690,6 +690,10 @@ footer::before {
     border-radius: 8px;
     padding: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: visible;
+    height: auto;
+    position: relative;
+    z-index: 10;
 }
 
 /* Make Cal.com widget responsive */
@@ -700,5 +704,14 @@ footer::before {
 }
 /* Adjust calendar height */
 #my-cal-inline {
-    height: 450px; /* Reduced height to eliminate extra space */
+    height: 700px; /* Increased height to show full calendar */
+}
+/* Fix clickable elements */
+.booking-section form,
+.booking-section input,
+.booking-section select,
+.cal-widget-container iframe {
+    position: relative;
+    z-index: 10;
+    pointer-events: auto !important;
 }
