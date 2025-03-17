@@ -715,3 +715,22 @@ footer::before {
     z-index: 10;
     pointer-events: auto !important;
 }
+/* More aggressive Cal fixes */
+#my-cal-inline,
+#my-cal-inline iframe {
+  min-height: 800px !important;
+  height: 800px !important;
+  width: 100% !important;
+  overflow: visible !important;
+}
+
+/* Fix z-index for particles */
+#tsparticles {
+  z-index: 0 !important;
+}
+
+/* Ensure all clickable elements work */
+.booking-section {
+  position: relative;
+  z-index: 5;
+}
