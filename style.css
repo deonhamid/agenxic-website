@@ -734,3 +734,20 @@ footer::before {
   position: relative;
   z-index: 5;
 }
+/* Fix pointer events for Cal widget */
+#my-cal-inline,
+#my-cal-inline iframe,
+.cal-widget-container * {
+  pointer-events: auto !important;
+}
+
+/* Ensure tsparticles doesn't block interactions */
+#tsparticles {
+  pointer-events: none !important;
+}
+
+/* Boost calendar container above other elements */
+.cal-widget-container {
+  position: relative;
+  z-index: 100 !important;
+}
