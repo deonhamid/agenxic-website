@@ -72,9 +72,11 @@ main {
     padding: 0 10%;
 }
 
-/* Hero section */
+/* Hero section - UPDATED */
 .hero {
-    height: 80vh;
+    height: auto;
+    min-height: 50vh;
+    padding: 2rem 0 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -119,12 +121,10 @@ main {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Scroll indicator */
+/* Scroll indicator - UPDATED */
 .scroll-indicator {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    margin-top: 2rem;
 }
 
 .arrow-down {
