@@ -75,7 +75,7 @@ main {
 /* Hero section - UPDATED */
 .hero {
     height: auto;
-    min-height: 50vh;
+    min-height: 70vh;
     padding: 2rem 0 3rem;
     display: flex;
     flex-direction: column;
