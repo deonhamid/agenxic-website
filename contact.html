@@ -195,7 +195,9 @@
                     <label for="revenue">Company's annual revenue?</label>
                     <div class="select-wrapper">
                         <select id="revenue" name="revenue">
-                            <option value="Less than $100K/month">Less than $100K/month</option>
+                            <option value="Less than $20K/month">Less than $20K/month</option>
+                            <option value="$20K-50K/month">$20K-$50K/month</option>
+                            <option value="$50K-100K/month">$50K-$100K/month</option>
                             <option value="$100K-$500K/month">$100K-$500K/month</option>
                             <option value="$500K-$1M/month">$500K-$1M/month</option>
                             <option value="$1M+/month">$1M+/month</option>
@@ -236,9 +238,6 @@
                     <textarea id="message" name="message" placeholder="Type your response here..." rows="5"></textarea>
                 </div>
                 
-                <div class="recaptcha-container full-width">
-                    <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
-                </div>
                 
                 <div class="form-group full-width">
                     <button type="submit" class="submit-btn">Submit</button>
@@ -297,6 +296,5 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
