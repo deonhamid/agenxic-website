@@ -862,38 +862,63 @@ footer {
 }
 
 
-/* Add these styles to the end of your style.css file */
+/* Add these styles to your style.css file to center the hero content on mobile */
 
-/* Only target very small mobile devices */
-@media (max-width: 480px) {
-    /* Reset the logo positioning */
-    .logo {
-        margin-left: 0;
+@media only screen and (max-width: 480px) {
+    /* Center hero text and elements */
+    .hero-text {
+        text-align: center !important;
+        margin: 0 auto !important;
     }
     
-    /* Adjust header container for small screens only */
-    header .container {
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 100%;
+    /* Center the subtitle */
+    .hero .subtitle {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 90% !important;
     }
     
-    /* Ensure the hero container has proper padding */
+    /* Center the CTA buttons */
+    .cta-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 auto !important;
+        width: 80% !important;
+    }
+    
+    /* Space between buttons */
+    .cta-buttons a {
+        margin-bottom: 10px !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    /* Ensure the hero container is properly centered */
     .hero .container {
-        padding-left: 10px;
-        padding-right: 10px;
-        width: 100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
     
-    /* Set proper text wrapping for header */
-    h1 {
-        word-wrap: break-word;
-        hyphens: auto;
+    /* Ensure hero content is properly centered */
+    .hero-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
     }
     
-    /* Make sure the AGENXIC logo is fully visible */
-    .logo a {
-        font-size: 1.5rem;
-        padding-left: 10px;
+    /* Adjust hero heading */
+    .hero h1 {
+        text-align: center !important;
+        max-width: 90% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 }
