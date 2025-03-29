@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Agenxic - AI Automation and Consulting Agency</title>
+    <meta name="description" content="Get in touch with Agenxic to discuss how we can help automate your business operations with AI.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/mobile-style.css">
+    <style>
+        /* Contact form specific styles */
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .contact-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .contact-intro h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-intro p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+        
+        .form-group label {
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 0.75rem;
+            border: 1px solid #e0e0e0;
+            border-radius: var(--radius-md);
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: transparent;
+            border-bottom: 2px solid #333;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-radius: 0;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .select-wrapper {
+            position: relative;
+        }
+        
+        .select-wrapper:after {
+            content: "▼";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            font-size: 0.8rem;
+        }
+        
+        button.submit-btn {
+            background-color: var(--dark);
+            color: var(--light);
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Space Grotesk', sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        button.submit-btn:hover {
+            background-color: #222;
+            transform: translateY(-2px);
+        }
+        
+        .recaptcha-container {
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="/">AGENXIC</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#how-we-work">How We Work</a></li>
+                    <li><a href="index.html#why-us">Why Us</a></li>
+                    <li><a href="index.html#case-studies">Case Studies</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html" class="btn-dark">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-intro">
+                <h1>Contact Us</h1>
+                <p>We're eager to learn about your AI automation needs and explore how we can help. Whether you're just starting your AI journey or looking to enhance existing systems, we're here to guide, assist, or simply share in your excitement. Let's make your AI journey memorable together!</p>
+            </div>
+            
+            <!-- Formspree form - using the ID you provided -->
+            <form action="https://formspree.io/f/xyzeyved" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">What is your name?</label>
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">What is your email?</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="role">What is your role within your organization?</label>
+                    <input type="text" id="role" name="role" placeholder="Enter role">
+                </div>
+                
+                <div class="form-group">
+                    <label for="company">Company name?</label>
+                    <input type="text" id="company" name="company" placeholder="Enter company name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="website">Company website?</label>
+                    <input type="text" id="website" name="website" placeholder="Enter company website">
+                </div>
+                
+                <div class="form-group">
+                    <label for="company_size">Company size?</label>
+                    <div class="select-wrapper">
+                        <select id="company_size" name="company_size">
+                            <option value="Less than 20 people">Less than 20 people</option>
+                            <option value="20-50 people">20-50 people</option>
+                            <option value="51-200 people">51-200 people</option>
+                            <option value="201-1000 people">201-1000 people</option>
+                            <option value="1000+ people">1000+ people</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="revenue">Company's annual revenue?</label>
+                    <div class="select-wrapper">
+                        <select id="revenue" name="revenue">
+                            <option value="Less than $100K/month">Less than $100K/month</option>
+                            <option value="$100K-$500K/month">$100K-$500K/month</option>
+                            <option value="$500K-$1M/month">$500K-$1M/month</option>
+                            <option value="$1M+/month">$1M+/month</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="budget">Project budget?</label>
+                    <div class="select-wrapper">
+                        <select id="budget" name="budget">
+                            <option value="$0-$5000">$0-$5000</option>
+                            <option value="$5000-$10000">$5000-$10000</option>
+                            <option value="$10000-$25000">$10000-$25000</option>
+                            <option value="$25000-$50000">$25000-$50000</option>
+                            <option value="$50000+">$50000+</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="services">What services are you interested in?</label>
+                    <div class="select-wrapper">
+                        <select id="services" name="services">
+                            <option value="Developing a custom AI solution">Developing a custom AI solution</option>
+                            <option value="AI Prospect Engine">AI Prospect Engine</option>
+                            <option value="Autonomous Agents">Autonomous Agents</option>
+                            <option value="AI Consulting">AI Consulting</option>
+                            <option value="Custom LLM Applications">Custom LLM Applications</option>
+                            <option value="No-Code Automation">No-Code Automation</option>
+                            <option value="Enterprise AI Integration">Enterprise AI Integration</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="message">How can we help?</label>
+                    <textarea id="message" name="message" placeholder="Type your response here..." rows="5"></textarea>
+                </div>
+                
+                <div class="recaptcha-container full-width">
+                    <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+                </div>
+                
+                <div class="form-group full-width">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>Agenxic</h3>
+                    <p>AI automation and consulting agency.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="prospect-engine.html">Prospect Engine</a></li>
+                        <li><a href="autonomous-agents.html">Autonomous Agents</a></li>
+                        <li><a href="ai-consulting.html">AI Consulting</a></li>
+                        <li><a href="llm-applications.html">LLM Applications</a></li>
+                        <li><a href="no-code-automation.html">No-Code Automation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agenxic. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</body>
+</html>
