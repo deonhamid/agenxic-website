@@ -860,3 +860,40 @@ footer {
         padding: var(--spacing-md);
     }
 }
+
+
+/* Add these styles to the end of your style.css file */
+
+/* Only target very small mobile devices */
+@media (max-width: 480px) {
+    /* Reset the logo positioning */
+    .logo {
+        margin-left: 0;
+    }
+    
+    /* Adjust header container for small screens only */
+    header .container {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+    }
+    
+    /* Ensure the hero container has proper padding */
+    .hero .container {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+    }
+    
+    /* Set proper text wrapping for header */
+    h1 {
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    /* Make sure the AGENXIC logo is fully visible */
+    .logo a {
+        font-size: 1.5rem;
+        padding-left: 10px;
+    }
+}
