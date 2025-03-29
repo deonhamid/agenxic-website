@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <!-- White background -->
+  <rect width="600" height="400" fill="#ffffff"/>
+  
+  <!-- Connection lines -->
+  <path d="M150,100 L270,60" stroke="#e0e9ff" stroke-width="2"/>
+  <path d="M150,100 L200,200" stroke="#e0e9ff" stroke-width="2"/>
+  <path d="M200,200 L300,250" stroke="#e0e9ff" stroke-width="2"/>
+  <path d="M300,250 L400,180" stroke="#e0e9ff" stroke-width="2"/>
+  <path d="M400,180 L480,220" stroke="#e0e9ff" stroke-width="2"/>
+  <path d="M400,180 L420,80" stroke="#e0e9ff" stroke-width="2"/>
+  <path d="M270,60 L420,80" stroke="#e0e9ff" stroke-width="2"/>
+  <path d="M270,60 L300,250" stroke="#e0e9ff" stroke-width="2" stroke-dasharray="5,3"/>
+  <path d="M150,300 L300,250" stroke="#e0e9ff" stroke-width="2"/>
+  <path d="M480,220 L500,320" stroke="#e0e9ff" stroke-width="2"/>
+  <path d="M300,250 L500,320" stroke="#e0e9ff" stroke-width="2" stroke-dasharray="5,3"/>
+  <path d="M480,220 L420,80" stroke="#e0e9ff" stroke-width="2" stroke-dasharray="5,3"/>
+  
+  <!-- Node pulse animations -->
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <radialGradient id="nodeGradient" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+      <stop offset="0%" stop-color="#3498db"/>
+      <stop offset="100%" stop-color="#2980b9"/>
+    </radialGradient>
+    
+    <!-- Pulse animations -->
+    <circle id="pulse" r="40" fill="none" stroke="#3498db" stroke-width="2">
+      <animate attributeName="r" from="15" to="40" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" from="0.4" to="0" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </defs>
+  
+  <!-- Nodes with pulses -->
+  <g filter="url(#glow)">
+    <!-- Node 1 -->
+    <circle cx="150" cy="100" r="15" fill="url(#nodeGradient)"/>
+    <use xlink:href="#pulse" x="150" y="100">
+      <animate attributeName="opacity" from="0.4" to="0" dur="2s" begin="0s" repeatCount="indefinite"/>
+    </use>
+    
+    <!-- Node 2 -->
+    <circle cx="270" cy="60" r="12" fill="url(#nodeGradient)"/>
+    <use xlink:href="#pulse" x="270" y="60">
+      <animate attributeName="opacity" from="0.4" to="0" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+    </use>
+    
+    <!-- Node 3 -->
+    <circle cx="200" cy="200" r="10" fill="url(#nodeGradient)"/>
+    <use xlink:href="#pulse" x="200" y="200">
+      <animate attributeName="opacity" from="0.4" to="0" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+    </use>
+    
+    <!-- Node 4 (larger central node) -->
+    <circle cx="300" cy="250" r="20" fill="url(#nodeGradient)"/>
+    <use xlink:href="#pulse" x="300" y="250">
+      <animate attributeName="opacity" from="0.4" to="0" dur="2s" begin="0.9s" repeatCount="indefinite"/>
+    </use>
+    
+    <!-- Node 5 -->
+    <circle cx="400" cy="180" r="14" fill="url(#nodeGradient)"/>
+    <use xlink:href="#pulse" x="400" y="180">
+      <animate attributeName="opacity" from="0.4" to="0" dur="2s" begin="1.2s" repeatCount="indefinite"/>
+    </use>
+    
+    <!-- Node 6 -->
+    <circle cx="480" cy="220" r="12" fill="url(#nodeGradient)"/>
+    <use xlink:href="#pulse" x="480" y="220">
+      <animate attributeName="opacity" from="0.4" to="0" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+    </use>
+    
+    <!-- Node 7 -->
+    <circle cx="420" cy="80" r="13" fill="url(#nodeGradient)"/>
+    <use xlink:href="#pulse" x="420" y="80">
+      <animate attributeName="opacity" from="0.4" to="0" dur="2s" begin="1.8s" repeatCount="indefinite"/>
+    </use>
+    
+    <!-- Node 8 -->
+    <circle cx="150" cy="300" r="11" fill="url(#nodeGradient)"/>
+    <use xlink:href="#pulse" x="150" y="300">
+      <animate attributeName="opacity" from="0.4" to="0" dur="2s" begin="2.1s" repeatCount="indefinite"/>
+    </use>
+    
+    <!-- Node 9 -->
+    <circle cx="500" cy="320" r="13" fill="url(#nodeGradient)"/>
+    <use xlink:href="#pulse" x="500" y="320">
+      <animate attributeName="opacity" from="0.4" to="0" dur="2s" begin="2.4s" repeatCount="indefinite"/>
+    </use>
+  </g>
+  
+  <!-- Small data particles moving along paths -->
+  <circle r="3" fill="#3498db">
+    <animateMotion path="M150,100 L270,60" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle r="3" fill="#3498db">
+    <animateMotion path="M270,60 L420,80" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle r="3" fill="#3498db">
+    <animateMotion path="M300,250 L400,180" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle r="3" fill="#3498db">
+    <animateMotion path="M400,180 L480,220" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle r="3" fill="#3498db">
+    <animateMotion path="M150,300 L300,250" dur="4s" repeatCount="indefinite"/>
+  </circle>
+</svg>

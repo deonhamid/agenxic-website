@@ -1,12 +1,21 @@
 {
-  "name": "Agenxic",
+  "name": "agenxic-website",
   "version": "1.0.0",
-  "engines": {
-    "node": ">=18.0.0"
-  },
+  "description": "Agenxic - AI Automation and Consulting Agency",
+  "main": "index.html",
   "scripts": {
-    "start": "serve -s ."
+    "start": "serve .",
+    "build": "echo 'No build step required for static site'"
   },
+  "keywords": [
+    "ai",
+    "automation",
+    "consulting",
+    "langchain",
+    "no-code"
+  ],
+  "author": "Agenxic",
+  "license": "MIT",
   "dependencies": {
     "serve": "^14.0.0"
   }
