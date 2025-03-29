@@ -325,6 +325,8 @@ nav a.btn-dark:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 300px; /* Ensure minimum height */
+    width: 100%;
 }
 
 .hero-image img {
@@ -351,14 +353,16 @@ nav a.btn-dark:hover {
 
 @keyframes pulse {
     0% {
-        opacity: 0.7;
-        transform: scale(0.95);
+      opacity: 0.7;
+      -webkit-transform: scale(0.95);
+      transform: scale(0.95);
     }
     100% {
-        opacity: 1;
-        transform: scale(1.05);
+      opacity: 1;
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05);
     }
-}
+  }
 
 /* Services Section */
 .services {
@@ -863,6 +867,27 @@ footer {
 
 
 /* Add these styles to your style.css file to center the hero content on mobile */
+
+
+/* Safari-specific fixes */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .hero-image svg {
+      width: 100%;
+      height: auto;
+      max-width: 600px;
+    }
+    
+    /* Force hardware acceleration for animations */
+    .hero-image {
+      -webkit-transform: translateZ(0);
+      -moz-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+      -o-transform: translateZ(0);
+      transform: translateZ(0);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+  }
 
 @media only screen and (max-width: 480px) {
     /* Center hero text and elements */
