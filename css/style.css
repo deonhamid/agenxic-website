@@ -948,31 +948,28 @@ footer {
     }
 }
 
-/* Improved button styling for Apply Now buttons */
-.btn-small, .btn {
-    padding: var(--spacing-sm) var(--spacing-xl) !important; /* Increase horizontal padding */
-    min-width: 120px; /* Ensure minimum width */
-    text-align: center;
-    font-weight: 600;
-    letter-spacing: 0.5px; /* Add slight letter spacing */
+
+/* Add vertical spacing between job details and Apply Now button */
+.case-study-card p:last-of-type,
+#open-positions li:last-of-type {
+    margin-bottom: 20px;  /* Increase space after the last paragraph or list item */
 }
 
-/* Specifically target the Apply Now buttons */
-a[href="contact.html"].btn-small {
-    padding: var(--spacing-sm) var(--spacing-xl) !important;
-    min-width: 140px; /* Wider than standard buttons */
-}
-
-/* Additional styling to match the site's aesthetic */
-.case-study-card .btn-small {
-    margin-top: 10px;
+/* Add more margin to the Apply Now buttons */
+.btn-small, 
+a[href="contact.html"].btn {
+    margin-top: 15px;
     display: inline-block;
 }
 
-/* Adjust mobile styling */
-@media (max-width: 576px) {
-    .btn-small, .btn {
-        padding: var(--spacing-sm) var(--spacing-lg) !important;
-        min-width: 110px;
-    }
+/* Add spacing between job description list items */
+.case-study-card ul li,
+#open-positions ul li {
+    margin-bottom: 12px;
+}
+
+/* Make sure the last list item has adequate spacing */
+.case-study-card ul,
+#open-positions ul {
+    margin-bottom: 25px;
 }
