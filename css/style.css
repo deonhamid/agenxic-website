@@ -947,3 +947,32 @@ footer {
         margin-right: auto !important;
     }
 }
+
+/* Improved button styling for Apply Now buttons */
+.btn-small, .btn {
+    padding: var(--spacing-sm) var(--spacing-xl) !important; /* Increase horizontal padding */
+    min-width: 120px; /* Ensure minimum width */
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.5px; /* Add slight letter spacing */
+}
+
+/* Specifically target the Apply Now buttons */
+a[href="contact.html"].btn-small {
+    padding: var(--spacing-sm) var(--spacing-xl) !important;
+    min-width: 140px; /* Wider than standard buttons */
+}
+
+/* Additional styling to match the site's aesthetic */
+.case-study-card .btn-small {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Adjust mobile styling */
+@media (max-width: 576px) {
+    .btn-small, .btn {
+        padding: var(--spacing-sm) var(--spacing-lg) !important;
+        min-width: 110px;
+    }
+}
