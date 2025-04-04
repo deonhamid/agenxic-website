@@ -977,37 +977,94 @@ a[href="contact.html"].btn {
 
 
 
-/* FAQ Section */
+/* FAQ Section Styles */
 .faq {
     padding: var(--spacing-4xl) 0;
     background-color: var(--background);
 }
 
-.faq-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: var(--spacing-xl);
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .faq-item {
+    margin-bottom: 1rem;
+    border-radius: var(--radius-md);
     background-color: var(--light);
-    border-radius: var(--radius-lg);
-    padding: var(--spacing-xl);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.faq-item h3 {
-    font-size: var(--text-lg);
-    margin-bottom: var(--spacing-md);
+.faq-question {
+    width: 100%;
+    padding: 1.5rem;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--dark);
+    transition: background-color 0.3s ease;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.faq-question:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.faq-question span {
+    flex: 1;
+}
+
+.faq-icon {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
     color: var(--dark);
 }
 
-.faq-item p {
+.faq-question[aria-expanded="true"] .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    padding: 0 1.5rem;
+}
+
+.faq-question[aria-expanded="true"] + .faq-answer {
+    max-height: 1000px;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.faq-answer p {
+    margin: 0;
     color: var(--text-light);
+    line-height: 1.7;
 }
 
 @media (max-width: 576px) {
-    .faq-grid {
-        grid-template-columns: 1fr;
+    .faq-accordion {
+        width: 100%;
+    }
+    
+    .faq-question {
+        padding: 1.25rem;
+        font-size: 1rem;
+    }
+    
+    .faq-answer {
+        padding: 0 1.25rem;
+    }
+    
+    .faq-question[aria-expanded="true"] + .faq-answer {
+        padding: 0 1.25rem 1.25rem;
     }
 }

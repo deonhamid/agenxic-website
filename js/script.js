@@ -75,3 +75,28 @@ if (menuToggle) {
     window.addEventListener('scroll', animateOnScroll);
     animateOnScroll();
 });
+
+// FAQ Accordion Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            // Toggle current item
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+            
+            // Optional: Close other items when one is opened
+            // Uncomment the following code if you want only one FAQ open at a time
+            /*
+            if (!isExpanded) {
+                faqQuestions.forEach(otherQuestion => {
+                    if (otherQuestion !== question) {
+                        otherQuestion.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+            */
+        });
+    });
+});
