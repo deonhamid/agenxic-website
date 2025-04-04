@@ -78,25 +78,39 @@ if (menuToggle) {
 
 // FAQ Accordion Functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const faqQuestions = document.querySelectorAll('.faq-question');
+    const faqToggles = document.querySelectorAll('.faq-toggle');
     
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', function() {
+    faqToggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
             // Toggle current item
             const isExpanded = this.getAttribute('aria-expanded') === 'true';
             this.setAttribute('aria-expanded', !isExpanded);
-            
-            // Optional: Close other items when one is opened
-            // Uncomment the following code if you want only one FAQ open at a time
-            /*
-            if (!isExpanded) {
-                faqQuestions.forEach(otherQuestion => {
-                    if (otherQuestion !== question) {
-                        otherQuestion.setAttribute('aria-expanded', 'false');
-                    }
-                });
-            }
-            */
         });
     });
+    
+    // Optional - View All FAQs functionality
+    const viewAllLink = document.querySelector('.view-all-link');
+    if (viewAllLink) {
+        viewAllLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const allClosed = [...faqToggles].every(toggle => 
+                toggle.getAttribute('aria-expanded') === 'false'
+            );
+            
+            if (allClosed) {
+                // Open all FAQs
+                faqToggles.forEach(toggle => {
+                    toggle.setAttribute('aria-expanded', 'true');
+                });
+                viewAllLink.textContent = 'Close all FAQs';
+            } else {
+                // Close all FAQs
+                faqToggles.forEach(toggle => {
+                    toggle.setAttribute('aria-expanded', 'false');
+                });
+                viewAllLink.textContent = 'View all FAQs';
+            }
+        });
+    }
 });
