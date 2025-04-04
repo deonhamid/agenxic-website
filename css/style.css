@@ -973,3 +973,41 @@ a[href="contact.html"].btn {
 #open-positions ul {
     margin-bottom: 25px;
 }
+
+
+
+
+/* FAQ Section */
+.faq {
+    padding: var(--spacing-4xl) 0;
+    background-color: var(--background);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.faq-item {
+    background-color: var(--light);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.faq-item h3 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--spacing-md);
+    color: var(--dark);
+}
+
+.faq-item p {
+    color: var(--text-light);
+}
+
+@media (max-width: 576px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
