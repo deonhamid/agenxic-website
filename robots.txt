@@ -1,4 +1,56 @@
+# Robots.txt for Agenxic Website
+
+# Global crawl settings
 User-agent: *
 Allow: /
+Crawl-delay: 10
 
+# Sitemaps
 Sitemap: https://agenxic.com/sitemap.xml
+
+# Directories to exclude
+Disallow: /admin/
+Disallow: /private/
+Disallow: /dashboard/
+Disallow: /js/
+Disallow: /css/
+
+# Specific content to allow
+Allow: /blog/
+Allow: /services/
+Allow: /case-studies/
+Allow: /about/
+Allow: /careers/
+Allow: /contact/
+
+# AI and search engine specific guidelines
+User-agent: GPTBot
+Allow: /blog/
+Allow: /services/
+Allow: /case-studies/
+Disallow: /contact/
+Disallow: /admin/
+
+User-agent: Claude-Bot
+Allow: /blog/
+Allow: /services/
+Allow: /case-studies/
+Disallow: /contact/
+Disallow: /admin/
+
+User-agent: Anthropic-Bot
+Allow: /blog/
+Allow: /services/
+Allow: /case-studies/
+Disallow: /contact/
+Disallow: /admin/
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Prevent indexing of duplicate or low-value content
+Noindex: /tags/
+Noindex: /categories/
