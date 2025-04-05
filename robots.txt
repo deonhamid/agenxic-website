@@ -1,56 +1,60 @@
 # Robots.txt for Agenxic Website
 
-# Global crawl settings
+# Global crawl settings for all crawlers
 User-agent: *
 Allow: /
-Crawl-delay: 10
-
-# Sitemaps
-Sitemap: https://agenxic.com/sitemap.xml
-
-# Directories to exclude
 Disallow: /admin/
 Disallow: /private/
 Disallow: /dashboard/
 Disallow: /js/
 Disallow: /css/
 
-# Specific content to allow
-Allow: /blog/
-Allow: /services/
-Allow: /case-studies/
-Allow: /about/
-Allow: /careers/
-Allow: /contact/
+# Sitemaps
+Sitemap: https://agenxic.com/sitemap.xml
 
-# AI and search engine specific guidelines
+# AI crawler specific rules
 User-agent: GPTBot
 Allow: /blog/
 Allow: /services/
 Allow: /case-studies/
+Allow: /about/
 Disallow: /contact/
 Disallow: /admin/
+Disallow: /private/
+Disallow: /dashboard/
+Disallow: /js/
+Disallow: /css/
 
 User-agent: Claude-Bot
 Allow: /blog/
 Allow: /services/
 Allow: /case-studies/
+Allow: /about/
 Disallow: /contact/
 Disallow: /admin/
+Disallow: /private/
+Disallow: /dashboard/
+Disallow: /js/
+Disallow: /css/
 
 User-agent: Anthropic-Bot
 Allow: /blog/
 Allow: /services/
 Allow: /case-studies/
+Allow: /about/
 Disallow: /contact/
 Disallow: /admin/
+Disallow: /private/
+Disallow: /dashboard/
+Disallow: /js/
+Disallow: /css/
 
+# Major search engines
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
-# Prevent indexing of duplicate or low-value content
-Noindex: /tags/
-Noindex: /categories/
+# Note: For tags and categories pages that should not be indexed,
+# use meta robots tags or HTTP headers on those pages instead of robots.txt
