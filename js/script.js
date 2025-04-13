@@ -12,6 +12,20 @@ if (menuToggle) {
     });
 }
     
+
+// Close mobile menu when nav link is clicked
+const navLinks = document.querySelectorAll('nav ul li a');
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        // Check if the mobile menu is active (visible)
+        if (nav.classList.contains('mobile-nav-active')) {
+            // Close the mobile menu
+            nav.classList.remove('mobile-nav-active');
+        }
+    });
+});
+
+
     // Tabs for How We Work section
     const tabHeaders = document.querySelectorAll('.tab-header');
     const tabContents = document.querySelectorAll('.tab-content');
