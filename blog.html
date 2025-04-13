@@ -8,6 +8,7 @@
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/mobile-styles.css">
     <style>
         /* Blog specific styles */
         .blog-header {
@@ -95,6 +96,28 @@
             font-weight: 600;
             color: var(--dark);
         }
+        
+        /* Consistent styling with index page */
+        header .container {
+            padding-left: 0;
+            padding-right: 0;
+            width: 95%;
+        }
+        
+        .logo {
+            margin-left: -20px;
+        }
+        
+        /* Fix for mobile */
+        @media only screen and (max-width: 768px) {
+            .logo {
+                margin-left: 0 !important;
+            }
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 
 
@@ -136,6 +159,9 @@
         <div class="container">
             <div class="logo">
                 <a href="/">AGENXIC</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
             </div>
             <nav>
                 <ul>
